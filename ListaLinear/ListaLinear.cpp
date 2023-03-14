@@ -133,11 +133,11 @@ void excluirElemento()
 		int pos = posicaoElemento(valor);
 
 		if (nElementos == 0) {
-			cout << "nao a elementos para deletar";
+			cout << "nao a elementos para deletar" << endl;
 		}
 
 		else if (pos == -1) {
-			cout << "N e possivel deletar esse elemento";
+			cout << "N e possivel deletar esse elemento" << endl;
 		
 		}
 
