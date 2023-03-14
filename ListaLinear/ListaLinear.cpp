@@ -11,6 +11,8 @@ void inserirElemento();
 void excluirElemento();
 void buscarElemento();
 int posicaoElemento(int valor);
+int indexElemento();
+
 //--------------------------
 
 
@@ -123,7 +125,23 @@ void inserirElemento()
 void excluirElemento()
 {
 
+	
+	int valor;
 
+		cout << "Digite a posicao do elemento que deseja excluir!" << endl;
+		cin >> (valor);
+
+		if (valor >= nElementos + 1) {
+			cout << "N e possivel deletar esse elemento";
+		}
+
+		else {
+			for (int i = valor - 1; i < nElementos; i++) {
+				lista[i] = lista[i + 1];
+				// não colocar o (nElementos--) aqui! 
+			}
+			nElementos--;
+		}
 }
 
 void buscarElemento()
