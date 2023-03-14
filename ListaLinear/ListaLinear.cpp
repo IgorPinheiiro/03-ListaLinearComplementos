@@ -130,13 +130,19 @@ void excluirElemento()
 
 		cout << "Digite a posicao do elemento que deseja excluir!" << endl;
 		cin >> (valor);
+		int pos = posicaoElemento(valor);
 
-		if (valor >= nElementos + 1) {
-			cout << "N e possivel deletar esse elemento";
+		if (nElementos == 0) {
+			cout << "nao a elementos para deletar";
 		}
 
-		else {
-			for (int i = valor - 1; i < nElementos; i++) {
+		else if (pos == -1) {
+			cout << "N e possivel deletar esse elemento";
+		
+		}
+
+		else{
+			for (int i = pos; i < nElementos; i++) {
 				lista[i] = lista[i + 1];
 				// não colocar o (nElementos--) aqui! 
 			}
